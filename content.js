@@ -37,7 +37,7 @@ setTimeout(() => {
 				});
 
 				// Export the extracted numbers as CSV
-				const csvContent = extractedNumbers.join("\n");
+				const csvContent = "OID\n" + extractedNumbers.join("\n");
 				const blob = new Blob([csvContent], { type: "text/csv" });
 				const url = URL.createObjectURL(blob);
 
