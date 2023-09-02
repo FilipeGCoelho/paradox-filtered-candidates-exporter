@@ -1,0 +1,25 @@
+{
+	"manifest_version": 3,
+	"name": "Export Paradox Data",
+	"version": "1.0",
+	"description": "Exports candidate data from Paradox",
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": ["activeTab", "storage", "scripting"],
+	"host_permissions": ["https://stg.paradox.ai/*"],
+	"content_scripts": [
+		{
+			"matches": ["https://stg.paradox.ai/candidates/*"],
+			"js": ["content.js"]
+		}
+	],
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "icon_16.png",
+			"48": "icon_48.png",
+			"128": "icon_128.png"
+		}
+	}
+}
