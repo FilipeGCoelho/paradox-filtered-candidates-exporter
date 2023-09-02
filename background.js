@@ -1,7 +1,9 @@
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	let proceed =
 		"complete" === changeInfo.status &&
-		/^https:\/\/stg.paradox.ai\/candidates\//.test(tab.url);
+		(/^https:\/\/stg.paradox.ai\/candidates\//.test(tab.url) ||
+			/^https:\/\/olivia.paradox.ai\/candidates\//.test(tab.url) ||
+			/^https:\/\/ltsstg.paradox.ai\/candidates\//.test(tab.url));
 
 	console.log(`changeInfo.status= ${changeInfo.status}`);
 	console.log(`tab.url= ${tab.url}`);

@@ -52,4 +52,4 @@ setTimeout(() => {
 			targetButtonContainer.appendChild(btn);
 		}
 	}
-}, 5000);
+}, 2500);

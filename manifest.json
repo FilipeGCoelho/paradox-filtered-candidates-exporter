@@ -7,10 +7,18 @@
 		"service_worker": "background.js"
 	},
 	"permissions": ["activeTab", "storage", "scripting"],
-	"host_permissions": ["https://stg.paradox.ai/*"],
+	"host_permissions": [
+		"https://stg.paradox.ai/*",
+		"https://olivia.paradox.ai/*",
+		"https://ltsstg.paradox.ai/*"
+	],
 	"content_scripts": [
 		{
-			"matches": ["https://stg.paradox.ai/candidates/*"],
+			"matches": [
+				"https://stg.paradox.ai/candidates/*",
+				"https://olivia.paradox.ai/candidates/*",
+				"https://ltsstg.paradox.ai/candidates/*"
+			],
 			"js": ["content.js"]
 		}
 	],
