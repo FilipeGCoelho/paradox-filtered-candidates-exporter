@@ -1,33 +1,46 @@
 {
-	"manifest_version": 3,
-	"name": "Export Paradox Data",
-	"version": "1.0",
-	"description": "Exports candidate data from Paradox",
-	"background": {
-		"service_worker": "background.js"
-	},
-	"permissions": ["activeTab", "storage", "scripting"],
-	"host_permissions": [
-		"https://stg.paradox.ai/*",
-		"https://olivia.paradox.ai/*",
-		"https://ltsstg.paradox.ai/*"
-	],
-	"content_scripts": [
-		{
-			"matches": [
-				"https://stg.paradox.ai/candidates/*",
-				"https://olivia.paradox.ai/candidates/*",
-				"https://ltsstg.paradox.ai/candidates/*"
-			],
-			"js": ["content.js"]
-		}
-	],
-	"action": {
-		"default_popup": "popup.html",
-		"default_icon": {
-			"16": "icon_16.png",
-			"48": "icon_48.png",
-			"128": "icon_128.png"
-		}
-	}
+  "manifest_version": 3,
+  "name": "Export Paradox Data",
+  "version": "1.0",
+  "description": "Exports candidate data from Paradox",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": [
+    "https://stg.paradox.ai/*",
+    "https://olivia.paradox.ai/*",
+    "https://ltsstg.paradox.ai/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://stg.paradox.ai/*",
+        "https://olivia.paradox.ai/*",
+        "https://ltsstg.paradox.ai/*"
+      ],
+      "js": ["workers/filtered-candidates-export.js", "workers/shortcuts.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "components/integration-center-shortcut.html",
+        "components/client-setup-integrations.html"
+      ],
+      "matches": [
+        "https://stg.paradox.ai/*",
+        "https://olivia.paradox.ai/*",
+        "https://ltsstg.paradox.ai/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon_16.png",
+      "48": "icon_48.png",
+      "128": "icon_128.png"
+    }
+  }
 }
