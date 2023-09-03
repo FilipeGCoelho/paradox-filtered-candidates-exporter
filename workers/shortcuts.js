@@ -9,6 +9,9 @@ setTimeout(() => {
   const clientSetupIntegrationsComponent = document.querySelector(
     "div#client-setup-integrations-shortcut"
   );
+  const candidateInboxComponent = document.querySelector(
+    "div#candidate-inbox-shortcut"
+  );
 
   if (targetContainer) {
     if (integrationCenterComponent == null) {
@@ -31,6 +34,21 @@ setTimeout(() => {
     if (clientSetupIntegrationsComponent == null) {
       // Fetch the content of the txt file
       fetch(chrome.runtime.getURL("components/client-setup-integrations.html"))
+        .then((response) => response.text())
+        .then((data) => {
+          // Inject the fetched content as the first child of the target container
+          targetContainer.insertAdjacentHTML("afterbegin", data);
+        })
+        .catch((error) => {
+          console.error(
+            "Error fetching the client-setup-integrations component file:",
+            error
+          );
+        });
+    }
+    if (candidateInboxComponent == null) {
+      // Fetch the content of the txt file
+      fetch(chrome.runtime.getURL("components/candidate-inbox-shortcut.html"))
         .then((response) => response.text())
         .then((data) => {
           // Inject the fetched content as the first child of the target container
