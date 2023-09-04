@@ -27,7 +27,8 @@
       "resources": [
         "components/integration-center-shortcut.html",
         "components/client-setup-integrations.html",
-        "components/candidate-inbox-shortcut.html"
+        "components/candidate-inbox-shortcut.html",
+        "components/workflows-shortcut.html"
       ],
       "matches": [
         "https://stg.paradox.ai/*",
