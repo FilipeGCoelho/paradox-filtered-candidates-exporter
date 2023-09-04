@@ -1,14 +1,19 @@
+div#shortcut-container {
+  position:fixed;
+  padding: 10px;
+} 
+
 div.shortcut-item {
   min-height: 40px;
   margin-right: 10px;
   display: inline-flex;
+  position:flex;
+  box-shadow: #333333;
 }
 
 div.shortcut-content {
   min-width: 40px;
   min-height: 40px;
-  height: auto;
-  width: auto;
   padding: 4px;
 }
 
@@ -21,6 +26,7 @@ div.shortcut-content i.italic {
 
 span.shortcut-content-description {
   margin-left: 10px;
+  font-size: 12px;
   font-style: normal;
 }
 
@@ -29,10 +35,7 @@ span.shortcut-content-title {
   font-size: 19px;
 }
 
-div.shortcut-item a.menu-item {
-  width: auto;
-}
-
+div.shortcut-item a.menu-item,
 div.shortcut-item a.menu-item div.menu-item {
   width: auto;
 }
@@ -40,4 +43,21 @@ div.shortcut-item a.menu-item div.menu-item {
 div.menu-item div.item-content__icon.shortcut-content {
   width: auto;
   height: 40px;
+}
+
+.db6a39 .a38740 .item-content__icon.wrap__integration-shadow {
+  background-color: #dde1e8;
+  border-bottom: 2px solid #bfc6d3;
+  transition: background-color .15s linear;
+}
+
+.db6a39 .a38740 .item-content__icon.shortcut-content {
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  min-width: 64px;
+  color: #427887;
+  box-shadow: 2px 2px 5px 0px rgb(76 71 71 / 22%);
 }
