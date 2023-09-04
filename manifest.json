@@ -19,7 +19,8 @@
         "https://olivia.paradox.ai/*",
         "https://ltsstg.paradox.ai/*"
       ],
-      "js": ["workers/filtered-candidates-export.js", "workers/shortcuts.js"]
+      "js": ["workers/filtered-candidates-export.js", "workers/shortcuts.js"],
+      "css": ["css/style.css"]
     }
   ],
   "web_accessible_resources": [

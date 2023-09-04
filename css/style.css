@@ -1,0 +1,43 @@
+div.shortcut-item {
+  min-height: 40px;
+  margin-right: 10px;
+  display: inline-flex;
+}
+
+div.shortcut-content {
+  min-width: 40px;
+  min-height: 40px;
+  height: auto;
+  width: auto;
+  padding: 4px;
+}
+
+div.shortcut-content i.italic {
+  padding: 2px;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+span.shortcut-content-description {
+  margin-left: 10px;
+  font-style: normal;
+}
+
+span.shortcut-content-title {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+div.shortcut-item a.menu-item {
+  width: auto;
+}
+
+div.shortcut-item a.menu-item div.menu-item {
+  width: auto;
+}
+
+div.menu-item div.item-content__icon.shortcut-content {
+  width: auto;
+  height: 40px;
+}
