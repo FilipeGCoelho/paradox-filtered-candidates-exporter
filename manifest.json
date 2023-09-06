@@ -26,10 +26,11 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "components/integration-center-shortcut.html",
-        "components/client-setup-integrations.html",
-        "components/candidate-inbox-shortcut.html",
-        "components/workflows-shortcut.html"
+        "html/components/integration-center-shortcut.html",
+        "html/components/client-setup-integrations.html",
+        "html/components/candidate-inbox-shortcut.html",
+        "html/components/roles-permissions-shortcut.html",
+        "html/components/workflows-shortcut.html"
       ],
       "matches": [
         "https://stg.paradox.ai/*",
